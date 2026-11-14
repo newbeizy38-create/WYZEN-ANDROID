@@ -1,0 +1,21 @@
+WYZEN ANDROID - PROJETO BASE
+
+Este pacote converte a interface web WYZEN numa aplicação Android através de WebView.
+Não é ainda um APK pronto: o APK será compilado pelo GitHub Actions quando o projeto for enviado para um repositório GitHub.
+
+REQUISITOS
+- Android Studio ou GitHub para compilar na nuvem.
+- Java 17 e Android SDK 35 se compilar localmente.
+
+COMPILAR NO GITHUB
+1. Crie um repositório GitHub vazio chamado WYZEN-ANDROID.
+2. Envie todos os ficheiros/pastas deste ZIP para a branch main.
+3. Abra o separador Actions do repositório.
+4. Escolha "Build WYZEN APK" e aguarde a conclusão.
+5. Abra a execução concluída, vá a Artifacts e descarregue WYZEN-debug-APK.
+
+IMPORTANTE
+- O APK abre a interface WYZEN, mas a autenticação e sincronização online só funcionam depois de configurar SUPABASE_URL e SUPABASE_ANON_KEY no ficheiro app/src/main/assets/index.html.
+- Use apenas a chave anon/public. Nunca coloque service_role no HTML ou APK.
+- Esta é uma versão inicial WebView, não uma aplicação Android nativa completa.
+- Chamadas, notificações push e upload direto de ficheiros ainda não estão implementados.
